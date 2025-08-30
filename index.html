@@ -236,6 +236,9 @@
   const isStandalone = window.matchMedia('(display-mode: standalone)').matches || window.navigator.standalone;
   if(isIOS && !isStandalone){ $("#installHint").style.display = "inline-block"; }
 
-  if("serviceWorker" in navigator){ navigator.serviceWorker.register("./sw.js").catch(console.warn); }
+ if ("serviceWorker" in navigator) {
+  navigator.serviceWorker.register("./sw.js?v=3").catch(console.warn);
+}
+
 </body>
 </html>
